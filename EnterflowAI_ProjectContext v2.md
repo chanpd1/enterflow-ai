@@ -272,28 +272,16 @@ const KEYS = {
 
 ## 10. 캐릭터 데이터
 
-### Luccy (루씨, 23세)
-```
-Age:23 / Height:170cm / Weight:50kg / Bust:65D
-Hair: Lavender-grey, high ponytail
-Prompt Block: (cat-like eyes:1.9), (65D bust:1.8), (lean glamorous silhouette:1.7)
-Negative Prompt: (glasses:2.0), (short hair:1.5), (distorted fingers:1.8), (blurry face:1.2)
-casual: Red outer jacket + black crop top + silver chain harness + jeans
-idol costume1: Black off-shoulder top + denim jeans + arm warmers + leather pants
-```
+## 10. 캐릭터 데이터 (Character Identity)
 
-### Ariin (아린, 21세)
-```
-Age:21 / Height:155cm / Weight:48kg / Bust:60C
-Hair: Sharp black bob cut (tassel cut)
-Prompt Block: (facial ratio 1:1:2.0), (plump baby cheeks:1.8), (60C bust:1.5)
-Negative Prompt: (ponytail:2.0), (heavy makeup:1.2), (large ears:1.5), (extra limbs:1.8)
-casual: Gray hooded flannel shirt + ripped denim shorts + combat boots
-idol costume1: Black mesh top + light blue denim corset + leather shoes
+> ⚠️ [AI SYSTEM COMMAND: CHARACTER MASTER REFERENCE]
+> 캐릭터의 구체적인 프롬프트 수식 및 네거티브 프롬프트는 본 문서에 기록하지 않는다.
+> 클로드 너는 Scene 만들기 및 캐릭터 관련 코드를 작성하거나 렌더링을 준비할 때, **반드시 깃허브에 동기화된 `Character_Master.md` 파일을 참조**하여 해당 캐릭터의 수식을 100% 원형 그대로 가져와야 한다. 
+> 새로운 캐릭터를 DB에 추가할 때도 `Character_Master.md`의 구조(Formula 1, 2)를 표준 템플릿으로 삼아 규격화하라.
 
+* 등록된 메인 캐릭터: Ariin (21세), Luccy (23세), 외 추가될 것.
+* 상세 프롬프트 위치: `Character_Master.md` 파일 참조
 
-
-```
 
 ---
 
