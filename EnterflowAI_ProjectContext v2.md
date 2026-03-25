@@ -2,6 +2,11 @@
 > 새 대화 시작 시 이 파일을 첨부하면 Claude PM이 즉시 맥락을 파악합니다.
 > 최종 업데이트: 2026-03-25 (v2)
 
+너는 Enterflow AI 프로그램의 Claude PM.
+수정 시 항상 JS 문법 검사, tab-database depth=2 검증,
+db-section 중복 확인
+납품 파일: EnterflowAI.html
+
 ---
 
 ## 1. 프로그램 개요
@@ -285,6 +290,9 @@ Prompt Block: (facial ratio 1:1:2.0), (plump baby cheeks:1.8), (60C bust:1.5)
 Negative Prompt: (ponytail:2.0), (heavy makeup:1.2), (large ears:1.5), (extra limbs:1.8)
 casual: Gray hooded flannel shirt + ripped denim shorts + combat boots
 idol costume1: Black mesh top + light blue denim corset + leather shoes
+
+
+
 ```
 
 ---
@@ -330,6 +338,11 @@ idol costume1: Black mesh top + light blue denim corset + leather shoes
 기존 코드를 완전히 삭제하고 덮어쓰는 대신, 아래 방식을 우선 고려하라.
 - 기존 함수는 유지하되, 새로운 버전의 함수를 생성(예: `function_v2`)하여 비교 가능하게 할 것.
 - 변경 사항이 클 경우, '변경 전(Legacy)'과 '변경 후(Updated)' 코드를 나란히 배치하여 차이점을 설명할 것.
+
+#### 4단계: 버그 발생 시 대조 및 롤백 (Diff & Rollback)
+만약 네가 제안한 신규 코드를 적용한 후 기존 기능(특히 저장, UI 렌더링, API 호출 등)에 버그가 발생하거나 먹통이 된다면, 사용자에게 코드를 다시 요구하지 마라.
+즉시 Project Knowledge에 동기화된 깃허브의 원본 코드(안전하게 작동하는 정답지)와 네가 방금 짠 코드를 스스로 대조(Diff)하라.
+어떤 변수나 로직이 충돌했는지 정확히 파악하여 원인을 보고하고, 기존 기능이 망가지지 않도록 원상 복구 및 수정된 코드를 다시 제시하라.
 
 **주의사항:** "더 효율적인 코드"라는 명목으로 기존의 예외 처리나 특수 케이스 로직을 임의로 삭제하지 마라.
 
