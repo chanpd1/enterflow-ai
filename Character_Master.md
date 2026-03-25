@@ -120,25 +120,22 @@ Hair: heavily bleached blonde balayage hair
 
 \#### \*\*Master Formula 1 : Face \& Body Identity\*\*
 
-(Ordinary but over-groomed Caucasian American female student:1.3), (heavily bleached blonde balayage hair:1.4), (overdone makeup with heavy contouring and fake lashes:1.3), (intense envious and frowning expression:1.4), (pronounced 34D chest fullness:1.3), (average height and slim-average body build:1.2)
+(possessing an exceptionally flawless, unblemished, dewy porcelain skin texture with a soft natural luster:1.5), (with large, strikingly clear blue eyes and a wide-eyed fresh-faced gaze:1.4), with distinctive bleached blonde balayage hair, soft and wavy texture:1.3, (possessing delicate features with rounded contours including a rosy pink mouth and soft chin:1.3), (youthful face:1.8), (pronounced 34D chest fullness:1.3)
 
 
 
-\#### \*\*ID: Madison\_College\_01\*\*
+#### **ID: Madison_College_01**
 
-(Wearing an expensive but generic pink velour tracksuit:1.3), (holding a luxury brand handbag ostentatiously:1.2), (heavy gold jewelry:1.1), (white platform sneakers:1.1)
+(She is wearing an expensive but ordinary pink velvet tracksuit with the zipper undone, revealing the upper part of her voluptuous breasts over a tight deep round neck T-shirt:1.3), (white platform sneakers:1.1)
 
 
-
-\*\*\[Negative Prompt]\*\*
+**[Negative Prompt]**
 
 (purple hair:2.0), (short bob hair:1.5), (flat chest:1.2), (Asian features:1.5), (childlike face:1.3), (distorted fingers:1.8)
 
 
 
-\---
-
-
+---
 
 
 
@@ -152,13 +149,13 @@ Hair: Tangerine Orange Jelly Perm hair
 
 \### \*\*Master Formula 1 : Face \& Body Identity\*\*
 
-(Plain Caucasian American college girl:1.3), (Tangerine Orange Jelly Perm hair:1.2), (face with scattered freckles:1.4), (wide-eyed flustered expression:1.3), (naturally small 32A chest:1.3), (clumsy posture:1.2), (slightly chubby cheeks:1.1)
+(Down to just below the shoulders, Unmanageable long hair of Tangerine Orange Jelly Perm hair:1.5),(Thick hair:1.5), (face with scattered freckles:1.4), (naturally small 32A chest:1.3), (clumsy posture:1.2), (Glasses with large, thick frames:1.5)(ginger woman:1.8), (Photorealistic close-up portrait of the specific young woman from upload image now:1.2), (youthful face:1.8)(orangeheaded woman with wild hard curly hair and a dusting of freckles over her nose bridge:1.5)(Nerdy image:1.5), (There are no wrinkles on the face:1.3), (no nasolabial folds when smiling:1.8)
 
 
 
 \### \*\*ID: Mackenzie\_College\_01\*\*
 
-(Wearing an oversized navy college varsity jacket:1.3), (baggy mom-style jeans:1.2), (holding a stack of books and a spilling iced latte:1.4), (scuffed canvas sneakers:1.1)
+(The oversized, loose-fit plaid shirt that comes down to the thighs and looks cheap is open and has a mix of pink and navy colors :1.5), (white round-neck T-shirt:1.3), (wide-leg jeans:1.5), (beige sneakers:1.3)
 
 
 
@@ -186,28 +183,16 @@ Age:24 / Role: Popular Kingka (High-teen Heartthrob)
 
 \*\*Vibe:\*\* Athletic, charming, the guy every girl wants.
 
-
-
 \#### \*\*\[Master Formula 1 : Face \& Body Identity]\*\*
 
-(Handsome Caucasian American young man with a chiseled jawline:1.4), (short textured light brown hair:1.2), (bright and confident blue eyes:1.2), (athletic and muscular build with exceptionally broad shoulders:1.5), (solid and toned body structure visible even through clothing:1.4), (stature of approximately 188cm:1.2), (expression of being genuinely impressed and captivated, "wow" facial expression:1.3)
-
+(Handsome Caucasian American young man with a chiseled jawline sam upload image:1.4), (short textured light brown hair:1.2), (bright and confident brown eyes:1.2), (athletic and muscular build with exceptionally broad shoulders:1.5), (solid and toned body structure visible even through clothing:1.4), (stature of approximately 188cm:1.3), (Messy and tousled dark brown hair with voluminous textured layers:1.4), (natural wavy fringe falling slightly over the forehead:1.3), (tapered sides for a clean yet effortless look:1.2)
 
 
 \#### \*\*\[Outfit Library : Master Formula 2]\*\*
 
+\*\*ID: Tyler\_College\_01 (Green Jacket Look)\*\*
 
-
-\*\*ID: Tyler\_College\_01 (Varsity Jacket Look)\*\*
-
-(Wearing a well-fitting varsity jacket with navy wool body and white leather sleeves:1.3), (a simple white tight-fitting t-shirt underneath highlighting a solid chest and torso:1.4), (classic blue denim jeans:1.2), (sporty sneakers:1.1)
-
-
-
-\*\*ID: Tyler\_Gym\_01 (Athletic Look)\*\*
-
-(Wearing a grey sleeveless muscle tank top revealing toned muscular arms and shoulders:1.4), (black athletic shorts:1.2), (sports headband:1.1)
-
+(classic blue denim jeans:1.2), (sporty sneakers:1.1), (The toned chest muscles are visible tightly in the white T-shirt worn under the dark green Varsity jacket:1.5), (An H is embroidered in bold font on the right chest of the varsity jacket. Both sleeves are white, and stylish letter patches, embroidered patches, and logo patches are visible.)
 
 
 \#### \*\*\[Negative Prompt]\*\*
@@ -216,5 +201,52 @@ Age:24 / Role: Popular Kingka (High-teen Heartthrob)
 
 
 
+---
 
 
+
+## [PART 4: Supporting Characters - Others]
+
+### Mrs. Park (박 매니저, 52세)
+
+[Master Formula 1 : Face & Body Identity]
+(Realistic portrait of a middle-aged Asian woman in her early 50s:1.4), (short permed dark hair:1.3), (wearing practical glasses:1.2), (expressive face with natural age lines and a busy, authoritative look:1.3), (average middle-aged female body build:1.1)
+
+[Outfit ID: MrsPark_Work_01]
+(Wearing a professional navy blue supermarket manager vest with a visible name tag on the chest:1.4), (a simple white polo shirt underneath:1.2), (comfortable dark trousers:1.1), (holding a digital inventory scanner or a walkie-talkie:1.3)
+
+
+
+---
+
+
+
+## [PART 5: Ariin’s Family]
+
+### Mr. Lee (아린의 아버지, 53세)
+
+[Master Formula 1 : Face & Body Identity]
+(Handsome middle-aged Asian man in his early 50s:1.4), (neatly styled short black hair with subtle grey at the temples:1.3), (warm and gentle eyes with thin-rimmed glasses:1.3), (stature of approximately 175cm with a healthy, regular build:1.2), (resembling Ariin’s facial structure to show family likeness:1.4)
+
+[Outfit ID: Dad_Casual_01]
+(Wearing a neat beige knit sweater over a collared shirt:1.3), (classic khaki chinos:1.2), (comfortable leather loafers:1.1)
+
+
+---
+
+
+### Mrs. Lee (아린의 어머니, 49세)
+
+Role: 아린의 어머니. 아린의 미래가 기대되는 세련된 중년 미인.
+Vibe: Elegant, warm, and shares a striking family resemblance with Ariin.
+
+[Master Formula 1 : Face & Body Identity]
+Identity Core: (This character must appear as a natural, aged-up version of the specific Asian woman (Ariin) from the reference image:1.5), (Sharing facial features with (Ariin) :1.5)
+
+(She is Ariin's mother, and Ariin's genetics appear to have come from her. An aged version of a specific Asian woman appearing in Ariin's reference image, appearing to be around 49 years old: 1.8), (Possesses mature beauty while retaining Ariin's facial bone structure and features: 1.3), (Sophisticated middle-aged Asian woman with clear skin and a warm, maternal smile:1.5),(Her hair is a bob that is a little longer than Ariin's, and her bangs hang down like Ariin's:1.5), (The hair texture and hairstyle look almost identical:1.5), (choppy and shattered hair ends:1.4), (razor-cut textured layers:1.3), (natural hair stray strands:1.2), (Petite 158cm frame with a graceful and upright posture:1.2), (60D:1.3, the volume of a woman in her 40s felt through the top worn), (There are no waves or perms:1.5)
+
+[Outfit ID: Mom_Casual_01]
+(Wearing a deep V-neck short-sleeve t-shirt in dark charcoal grey:1.3), (with loose, soft, and slightly sheer cotton fabric that drapes naturally:1.3), (tight-fitting dark charcoal grey skinny pants or leggings:1.3), (robust high-top sneakers, shoes is normal canvas :1.3)
+
+#### **[Negative Prompt]**
+(extreme wrinkles:1.5), (grey hair:1.8), (white hair:1.8), (purple hair:2.0), (blonde hair:2.0), (orange hair:2.0), (childlike face:1.5), (teenager:1.5), (heavy smoky eye makeup:1.4), (extravagant jewelry:1.2), (flat chest:1.3), (Western features:1.5), (distorted facial features:1.8), (necklace:1.8)
