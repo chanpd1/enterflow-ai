@@ -112,6 +112,10 @@ Hair: Muted purple hair in a high ponytail and bangs
 
 \## 3.  Madison (매디슨, 23세)
 
+Age:23 / Height:173cm / Weight:51kg / Bust:34D
+
+Hair: heavily bleached blonde balayage hair
+
 
 
 \#### \*\*Master Formula 1 : Face \& Body Identity\*\*
@@ -120,11 +124,15 @@ Hair: Muted purple hair in a high ponytail and bangs
 
 
 
-\#### \*\*Outfit ID: Madison\_College\_01\*\*
+\#### \*\*ID: Madison\_College\_01\*\*
 
 (Wearing an expensive but generic pink velour tracksuit:1.3), (holding a luxury brand handbag ostentatiously:1.2), (heavy gold jewelry:1.1), (white platform sneakers:1.1)
 
 
+
+\*\*\[Negative Prompt]\*\*
+
+(purple hair:2.0), (short bob hair:1.5), (flat chest:1.2), (Asian features:1.5), (childlike face:1.3), (distorted fingers:1.8)
 
 
 
@@ -134,9 +142,11 @@ Hair: Muted purple hair in a high ponytail and bangs
 
 
 
-
-
 \## 4.  Mackenzie  (맥켄지, 23세)
+
+Age:23 / Height:170cm / Weight:48kg / Bust:32A
+
+Hair: Tangerine Orange Jelly Perm hair
 
 
 
@@ -146,15 +156,65 @@ Hair: Muted purple hair in a high ponytail and bangs
 
 
 
-\### \*\*Outfit ID: Mackenzie\_College\_01\*\*
+\### \*\*ID: Mackenzie\_College\_01\*\*
 
 (Wearing an oversized navy college varsity jacket:1.3), (baggy mom-style jeans:1.2), (holding a stack of books and a spilling iced latte:1.4), (scuffed canvas sneakers:1.1)
+
+
+
+\*\*\[Negative Prompt]\*\*
+
+(purple hair:2.0), (neatly styled hair:1.4), (glamorous silhouette:1.5), (intense gaze:1.3), (Asian features:1.5)
 
 
 
 
 
 \---
+
+
+
+\## \[PART 3: Supporting Characters (Male)]
+
+> 서브 캐릭터: 메인 캐릭터와의 상호작용 및 배경의 입체감을 더해주는 역할.
+
+
+
+\### 5. Tyler (타일러, 24세)
+
+Age:24 / Role: Popular Kingka (High-teen Heartthrob)
+
+\*\*Vibe:\*\* Athletic, charming, the guy every girl wants.
+
+
+
+\#### \*\*\[Master Formula 1 : Face \& Body Identity]\*\*
+
+(Handsome Caucasian American young man with a chiseled jawline:1.4), (short textured light brown hair:1.2), (bright and confident blue eyes:1.2), (athletic and muscular build with exceptionally broad shoulders:1.5), (solid and toned body structure visible even through clothing:1.4), (stature of approximately 188cm:1.2), (expression of being genuinely impressed and captivated, "wow" facial expression:1.3)
+
+
+
+\#### \*\*\[Outfit Library : Master Formula 2]\*\*
+
+
+
+\*\*ID: Tyler\_College\_01 (Varsity Jacket Look)\*\*
+
+(Wearing a well-fitting varsity jacket with navy wool body and white leather sleeves:1.3), (a simple white tight-fitting t-shirt underneath highlighting a solid chest and torso:1.4), (classic blue denim jeans:1.2), (sporty sneakers:1.1)
+
+
+
+\*\*ID: Tyler\_Gym\_01 (Athletic Look)\*\*
+
+(Wearing a grey sleeveless muscle tank top revealing toned muscular arms and shoulders:1.4), (black athletic shorts:1.2), (sports headband:1.1)
+
+
+
+\#### \*\*\[Negative Prompt]\*\*
+
+(skinny:1.5), (narrow shoulders:1.5), (beard:1.5), (glasses:1.2), (extra limbs:1.8), (distorted face:1.5)
+
+
 
 
 
