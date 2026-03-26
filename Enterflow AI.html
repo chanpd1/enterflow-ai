@@ -709,9 +709,16 @@ input:focus,textarea:focus,select:focus{border-color:var(--ac);}
                 <option value="angle">앵글</option>
                 <option value="film">Film Look</option>
               </select>
-              <select id="takeRefItemSel" style="flex:2;font-size:10px;padding:3px 5px;border:1px solid var(--bd);border-radius:5px;background:var(--sf3);color:var(--tx)" onchange="addTakeRefItem()">
-                <option value="">-- 하위 리스트 --</option>
-              </select>
+              <div id="takeRefItemDropWrap" style="flex:2;position:relative;">
+                <div id="takeRefItemDisplay" onclick="toggleRefItemPicker()" style="display:flex;align-items:center;gap:5px;padding:3px 6px 3px 4px;border:1px solid var(--bd);border-radius:5px;background:var(--sf3);cursor:pointer;font-size:10px;min-height:26px;">
+                  <span id="takeRefItemThumb" style="width:24px;height:18px;flex-shrink:0;border-radius:3px;overflow:hidden;background:var(--bd);display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--mu)">🖼️</span>
+                  <span id="takeRefItemName" style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mu)">-- 항목 선택 --</span>
+                  <span style="font-size:8px;color:var(--mu)">▼</span>
+                </div>
+                <div id="takeRefItemPicker" style="display:none;position:absolute;top:100%;left:0;right:0;z-index:201;background:var(--sf);border:1px solid var(--ac);border-radius:6px;box-shadow:0 4px 16px rgba(0,0,0,.4);max-height:200px;overflow-y:auto;margin-top:2px;">
+                  <div id="takeRefItemPickerList"><div style="padding:8px;font-size:10px;color:var(--mu)">카테고리를 먼저 선택하세요</div></div>
+                </div>
+              </div>
             </div>
             <div id="takeRefList" style="display:flex;gap:4px;flex-wrap:wrap;margin-top:4px;min-height:20px;"></div>
           </div>
@@ -931,9 +938,9 @@ input:focus,textarea:focus,select:focus{border-color:var(--ac);}
         <input type="password" id="apiGeminiKey" placeholder="AIza..." style="flex:1;font-size:11px;"/>
       </div>
     </div>
-    <div style="display:flex;gap:8px;justify-content:flex-end;">
-      <button class="bs" style="font-size:11px;padding:7px 16px;" onclick="closeApiModal()">취소</button>
-      <button class="bp" style="font-size:11px;padding:7px 16px;" onclick="saveApiModal()">연결</button>
+    <div style="display:flex;gap:8px;">
+      <button id="apiConnectBtn" class="bp" style="font-size:11px;padding:7px 0;flex:1;" onclick="saveApiModal()">연결</button>
+      <button class="bs" style="font-size:11px;padding:7px 0;flex:1;" onclick="closeApiModal()">취소</button>
     </div>
   </div>
 </div>
@@ -1914,16 +1921,28 @@ ${selAngle?`5. ⚠️ [절대 삭제 금지] 아래 구문이 ### [Scene Descrip
     const ensureAngle = (txt) => {
       const AP = '(Referencing the provided angle image, perfectly matching the camera composition and framing: 1.8)';
       if(!selAngle || !selAngle.image) return txt;
-      if(txt.includes('Referencing the provided angle image')) return txt;
-      // Scene Description 다음 ### 앞에 삽입
-      const fixed = txt.replace(/(### \[Scene Description\][\s\S]*?)(\n###)/, '$1\n' + AP + '$2');
-      if(fixed !== txt) return fixed;
-      // Technical Rendering 앞
-      if(txt.includes('### [Technical Rendering]'))
-        return txt.replace('### [Technical Rendering]', AP + '\n\n### [Technical Rendering]');
-      return txt + '\n\n' + AP;
+      // 기존 구문 중복 제거 후 마지막에만 강제 삽입
+      let cleaned = txt.replace(/\(Referencing the provided angle image[^)]*\),?\n?/g, '').trim();
+      if(cleaned.includes('### [Technical Rendering]'))
+        cleaned = cleaned.replace('### [Technical Rendering]', AP + '\n\n### [Technical Rendering]');
+      else if(cleaned.includes('### [Scene Description]')){
+        const r = cleaned.replace(/(### \[Scene Description\][\s\S]*?)(\n###)/, '$1\n' + AP + '$2');
+        cleaned = r !== cleaned ? r : cleaned + '\n\n' + AP;
+      } else cleaned = cleaned + '\n\n' + AP;
+      return cleaned;
     };
-    lastFinalPrompt = ensureAngle(extractEngPrompt(engOnly) || extractEngPrompt(finalPrompt));
+    const ensureCharIdentity = (txt) => {
+      const CI = '(general bone structure—must strictly maintain the absolute identity and clarity seen in the front face: 2.0)';
+      if(txt.includes('general bone structure')) return txt;
+      if(txt.includes('[Character Identity]')){
+        const fixed = txt.replace(/(\[Character Identity\][\s\S]*?)(\n###|\/\/|\n\n###)/, '$1\n' + CI + '$2');
+        if(fixed !== txt) return fixed;
+      }
+      if(txt.includes('### [Character Focus Task]'))
+        return txt.replace('### [Character Focus Task]', '### [Character Focus Task]\n' + CI);
+      return txt;
+    };
+    lastFinalPrompt = ensureCharIdentity(ensureAngle(extractEngPrompt(engOnly) || extractEngPrompt(finalPrompt)));
     // 한글 번역이 있으면 transSegs에 미리 설정
     if(koOnly){
       transSegs = [{id:0, en:lastFinalPrompt, ko:koOnly}];
@@ -1936,7 +1955,7 @@ ${selAngle?`5. ⚠️ [절대 삭제 금지] 아래 구문이 ### [Scene Descrip
     s4fb.style.cssText="margin:8px 11px 4px;padding:10px;background:rgba(107,107,138,.08);border:1px solid var(--bd);border-radius:6px;";
     s4fb.innerHTML='<div style="font-size:10px;color:var(--mu);margin-bottom:6px;font-weight:600">💬 더 피드백하실 부분이 있나요?</div>'
       +'<textarea id="step4FeedbackInput" oninput="autoH(this)" style="width:100%;min-height:56px;resize:vertical;font-size:11px;line-height:1.5;overflow-y:hidden;background:var(--sf2);border:1px solid var(--bd);border-radius:5px;padding:6px 8px;color:var(--tx);font-family:inherit;outline:none;" placeholder="예) 자켓 오픈, 카메라 더 낮게..."></textarea>'
-      +'<button onclick="runStep4Feedback()" style="margin-top:6px;padding:6px;background:linear-gradient(135deg,var(--cl),var(--ac));border:none;border-radius:5px;color:#fff;font-size:11px;cursor:pointer;width:100%">🔄 피드백 반영하기</button>';
+      +'<button onclick="runStep4Feedback(this)" style="margin-top:6px;padding:6px;background:linear-gradient(135deg,var(--cl),var(--ac));border:none;border-radius:5px;color:#fff;font-size:11px;cursor:pointer;width:100%">🔄 피드백 반영하기</button>';
     document.getElementById("s4c").appendChild(s4fb);
 
     // ── STEP 5: 저장 & 기록 ──
@@ -2698,29 +2717,36 @@ function collapseTaskArea(){
   taskAreaCollapsed = true;
   const area = document.getElementById('taskArea');
   if(!area) return;
-  // 연구 과제 textarea와 드롭다운들 숨김
-  const els = area.querySelectorAll('textarea, .fl-section, #attachPrev, label[for], label');
-  els.forEach(el => { if(el.id !== 'taskArea') el.style.display = 'none'; });
-  // 요약 표시
+  // textarea, 드롭다운, 첨부 레퍼런스, label 전부 숨김
+  area.querySelectorAll('textarea, .fl-section, #attachPrev, label[for], label, .tac').forEach(el=>el.style.display='none');
+  // 요약 한 줄 표시
   let summary = document.getElementById('taskSummary');
   if(!summary){
     summary = document.createElement('div');
     summary.id = 'taskSummary';
-    summary.style.cssText = 'font-size:10px;color:var(--mu);padding:3px 0;cursor:pointer;';
+    summary.style.cssText = 'font-size:10px;color:var(--mu);padding:4px 2px;cursor:pointer;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;';
     summary.onclick = expandTaskArea;
-    area.insertBefore(summary, area.querySelector('.tac'));
+    area.insertBefore(summary, area.firstChild);
   }
   const task = document.getElementById('taskInput');
-  summary.textContent = '🔬 ' + (task ? task.value.slice(0,60) + (task.value.length>60?'...':'') : '') + '  (클릭해서 펼치기)';
+  const preview = task ? task.value.slice(0,80)+(task.value.length>80?'...':'') : '(내용 없음)';
+  summary.textContent = '🔬 ' + preview + '  (클릭해서 펼치기)';
   summary.style.display = 'block';
+  // height 55px 고정
+  area.style.height = '55px';
+  area.style.minHeight = '55px';
+  area.style.overflow = 'hidden';
   const tb=document.getElementById('taskToggleBtn');if(tb)tb.textContent='📋 펼치기';
 }
 function expandTaskArea(){
   taskAreaCollapsed = false;
   const area = document.getElementById('taskArea');
   if(!area) return;
-  const els = area.querySelectorAll('textarea, .fl-section, #attachPrev');
-  els.forEach(el => { el.style.display = ''; });
+  // height 복원
+  area.style.height = '';
+  area.style.minHeight = '';
+  area.style.overflow = '';
+  area.querySelectorAll('textarea, .fl-section, #attachPrev, .tac').forEach(el=>el.style.display='');
   const summary = document.getElementById('taskSummary');
   if(summary) summary.style.display = 'none';
   const tb=document.getElementById('taskToggleBtn');if(tb)tb.textContent='📋 접기';
@@ -4275,21 +4301,18 @@ document.addEventListener('click', function(e){
 // ── TAKE별 레퍼런스 드롭다운 ──
 function updateTakeRefItemSel(){
   const cat=document.getElementById('takeRefCatSel')?.value;
-  const sel=document.getElementById('takeRefItemSel');
-  if(!sel||!cat){if(sel)sel.innerHTML='<option value="">-- 항목 선택 --</option>';return;}
-  let items=[];
-  if(cat==='ms') lib.mss.filter(x=>x.image).forEach(x=>items.push({id:x.id,name:x.name,base64:x.image}));
-  else if(cat==='char') lib.chars.forEach(ch=>{
-    if(ch.slots.ff)items.push({id:ch.id+'_ff',name:ch.name+' 얼굴',base64:ch.slots.ff});
-    if(ch.slots.fs)items.push({id:ch.id+'_fs',name:ch.name+' 시트',base64:ch.slots.fs});
-    if(ch.slots.op)items.push({id:ch.id+'_op',name:ch.name+' 의상',base64:ch.slots.op});
-  });
-  else if(cat==='lb') lib.lbs.filter(x=>x.image).forEach(x=>items.push({id:x.id,name:x.name,base64:x.image}));
-  else if(cat==='bg') lib.bgs.filter(x=>x.image).forEach(x=>items.push({id:x.id,name:x.name,base64:x.image}));
-  else if(cat==='angle') lib.angles.forEach(grp=>grp.images&&grp.images.forEach(img=>items.push({id:grp.id+'|'+img.id,name:grp.name+' - '+img.name,base64:img.image})));
-  else if(cat==='film') lib.films.forEach(fl=>items.push({id:fl.id,name:fl.name,base64:null}));
-  sel.innerHTML='<option value="">-- 항목 선택 --</option>'+
-    items.map(it=>'<option value="'+it.id+'">'+it.name+'</option>').join('');
+  _refPItems=[];
+  const th=document.getElementById('takeRefItemThumb'),nm=document.getElementById('takeRefItemName');
+  if(th)th.innerHTML='🖼️'; if(nm)nm.textContent='-- 항목 선택 --';
+  if(!cat){closeRefPicker();return;}
+  const items=[];
+  if(cat==='char') lib.chars.forEach(c=>items.push({id:c.id,name:c.name,b64:c.slots?.ff||null,cat}));
+  else if(cat==='ms') lib.mss.forEach(m=>items.push({id:m.id,name:m.name,b64:m.image||null,cat}));
+  else if(cat==='lb') lib.lbs.forEach(l=>items.push({id:l.id,name:l.name,b64:l.image||null,cat}));
+  else if(cat==='bg') lib.bgs.forEach(b=>items.push({id:b.id,name:b.name,b64:b.image||null,cat}));
+  else if(cat==='angle') lib.angles.forEach(g=>g.items?.forEach(a=>items.push({id:a.id,name:g.name+' - '+a.label,b64:a.image||null,cat})));
+  else if(cat==='film') lib.films.forEach(f=>items.push({id:f.id,name:f.name,b64:null,cat}));
+  _refPItems=items;
 }
 
 function addTakeRefItem(){
@@ -4496,8 +4519,10 @@ function selectTake(idx){
   // 카테고리 드롭다운 초기화 (TAKE별 독립)
   const catSel = document.getElementById('takeRefCatSel');
   if(catSel) catSel.value = '';
-  const itemSel = document.getElementById('takeRefItemSel');
-  if(itemSel) itemSel.innerHTML = '<option value="">-- 하위 리스트 --</option>';
+  _refPItems=[];
+  const rt=document.getElementById('takeRefItemThumb'),rn=document.getElementById('takeRefItemName');
+  if(rt)rt.innerHTML='🖼️'; if(rn)rn.textContent='-- 항목 선택 --';
+  closeRefPicker();
   const ta = document.getElementById('takeSceneInput');
   if(ta){
     ta.value = t.scene||'';
@@ -5068,6 +5093,10 @@ function openApiModal(type){
   document.getElementById('apiDotG').style.background = gk ? 'var(--ok)' : 'var(--mu)';
   const modal = document.getElementById('apiModal');
   if(modal) modal.style.display='flex';
+  // 연결/해제 버튼 동적 텍스트
+  const isConn = !!(ck && gk);
+  const cbtn = document.getElementById('apiConnectBtn');
+  if(cbtn){ cbtn.textContent = isConn ? '해제' : '연결'; cbtn.onclick = isConn ? disconnectApiModal : saveApiModal; }
   // 해당 input 포커스
   setTimeout(()=>{
     const el = type==='gemini' ? document.getElementById('apiGeminiKey') : document.getElementById('apiClaudeKey');
@@ -5091,6 +5120,18 @@ function saveApiModal(){
   alert('✅ API 키가 저장됐어요!');
 }
 
+function disconnectApiModal(){
+  if(!confirm('API 키 연결을 해제할까요?')) return;
+  localStorage.removeItem('ck'); localStorage.removeItem('gk');
+  document.getElementById('apiClaudeKey').value = '';
+  document.getElementById('apiGeminiKey').value = '';
+  document.getElementById('apiDotC').style.background = 'var(--mu)';
+  document.getElementById('apiDotG').style.background = 'var(--mu)';
+  const b = document.getElementById('apiConnectBtn');
+  if(b){ b.textContent='연결'; b.onclick=saveApiModal; }
+  syncNavIndicators();
+  alert('✅ API 키 연결이 해제됐어요.');
+}
 function cancelFilmModal(){
   const btn=document.getElementById('filmModalBtn');
   if(btn){btn.textContent='추가';btn.onclick=addFilmConfirm;}
@@ -5099,6 +5140,49 @@ function cancelFilmModal(){
   closeM('addFilmM');
 }
 
+
+// ── takeRef 이미지 픽커 ──
+let _refPOpen=false, _refPItems=[];
+function toggleRefItemPicker(){
+  const p=document.getElementById('takeRefItemPicker'); if(!p)return;
+  _refPOpen=!_refPOpen;
+  if(_refPOpen){
+    const list=document.getElementById('takeRefItemPickerList');
+    if(list){
+      if(!_refPItems.length){
+        list.innerHTML='<div style="padding:8px;font-size:10px;color:var(--mu)">등록된 항목이 없어요</div>';
+      } else {
+        list.innerHTML=_refPItems.map(it=>{
+          const th=it.b64
+            ?`<img src="${it.b64}" style="width:40px;height:28px;object-fit:cover;border-radius:3px;flex-shrink:0;border:1px solid var(--bd)"/>`
+            :`<span style="width:40px;height:28px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:14px;background:var(--sf2);border-radius:3px;">🎞️</span>`;
+          const sid=it.id.replace(/'/g,"\'"), sn=it.name.replace(/'/g,"\'");
+          return `<div onclick="pickRef('${sid}','${sn}','${it.cat}')" style="display:flex;align-items:center;gap:8px;padding:5px 8px;cursor:pointer;font-size:10px" onmouseover="this.style.background='var(--sf2)'" onmouseout="this.style.background=''">${th}<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${it.name}</span></div>`;
+        }).join('');
+      }
+    }
+    p.style.display='block';
+  } else { p.style.display='none'; }
+}
+function closeRefPicker(){
+  const p=document.getElementById('takeRefItemPicker'); if(p)p.style.display='none'; _refPOpen=false;
+}
+function pickRef(id,name,cat){
+  closeRefPicker();
+  const it=_refPItems.find(x=>x.id===id);
+  const th=document.getElementById('takeRefItemThumb'), nm=document.getElementById('takeRefItemName');
+  if(th&&it?.b64) th.innerHTML=`<img src="${it.b64}" style="width:100%;height:100%;object-fit:cover;"/>`;
+  if(nm) nm.textContent=name;
+  const t=takes[curTakeIdx]; if(!t)return;
+  if(!t.refItems)t.refItems=[];
+  if(t.refItems.find(x=>x.id===id))return;
+  t.refItems.push({id,cat,name,base64:it?.b64||null});
+  saveBatchData(); renderTakeRefList(); renderTakeList();
+}
+document.addEventListener('click', e=>{
+  const w=document.getElementById('takeRefItemDropWrap');
+  if(w&&!w.contains(e.target)) closeRefPicker();
+});
 </script>
 </body>
 </html>
