@@ -7,7 +7,7 @@
 <style>
 :root{--bg:#0d0d14;--sf:#12121a;--sf2:#1a1a26;--sf3:#20202e;--bd:#2a2a3e;--cl:#4956ff;--ge:#4285f4;--ac:#4956ff;--tx:#e8e8f0;--mu:#6b6b8a;--ok:#34d399;--wn:#fbbf24;--er:#f87171;}
 *{margin:0;padding:0;box-sizing:border-box;}
-body{background:var(--bg);color:var(--tx);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh;height:100vh;display:flex;flex-direction:column;overflow:hidden;}
+body{background:var(--bg);color:var(--htx);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh;height:100vh;display:flex;flex-direction:column;overflow:hidden;}
 header{padding:10px 18px;border-bottom:1px solid var(--bd);display:flex;align-items:center;gap:10px;background:var(--sf);flex-shrink:0;}
 .logo{font-size:15px;font-weight:700;color:var(--ac);letter-spacing:-0.5px;}
 .dot{width:6px;height:6px;border-radius:50%;background:var(--mu);display:inline-block;margin-right:3px;transition:background .3s;}
@@ -2625,7 +2625,6 @@ function getSelectedFilm(){
   const found=(dbData.filmLook||[]).find(fl=>fl.id===sel.value)||null;
   if(found)return {id:found.id,name:found.name,prompt:found.content};
   return null;
-}
 }
 
 
