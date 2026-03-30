@@ -125,7 +125,7 @@ var dbData = {
 * **Forbidden Elements:** "plastic skin, oversaturated, over-sharpened, smooth skin filter, digital noise, mobile phone quality, watermark, distorted facial features."
 
 ### 13-4. [Prompt Assembly Logic]
-1. **Base:** Section 12-1의 글로벌 규격을 최우선으로 로드.
+1. **Base:** Section 13-1의 글로벌 규격을 최우선으로 로드.
 2. **Character:** `Character base data`의 고정값 적용.
 3. **Style:** `FilmLook` 및 `Hex_Palette` 파싱 데이터 결합.
 4. **Skin:** `Skin_Texture` 데이터와 Section 12-2의 'Clean Skin' 로직 결합.
