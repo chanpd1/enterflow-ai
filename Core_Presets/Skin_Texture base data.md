@@ -115,6 +115,18 @@ Prompt Keywords: natural everyday skin, soft-focus effect, clean and pure aesthe
 
 
 
+=== Beauty Influencer (하이엔드 뷰티 화보 질감) ===
+
+Prompt: (Masterpiece beauty photography:1.4), (Ultra-transparent glass skin texture:1.6), (Subsurface scattering lighting:1.5), (Micro-surface epidermal details:1.3), (Zero-imperfection flawless complexion:1.7), (Dewy and luminous finish:1.5), (Professional high-end beauty retouching style:1.4), (Soft-focus skin boundaries:1.2).
+
+
+
+=== Natural Glossy (내추럴 광채 인플루언서 질감) ===
+
+Prompt: (Realistic healthy skin sheen:1.5), (Natural skin micro-texture:1.4), (Clear and bright skin tone:1.6), (Clean skin without blemishes:1.7), (Soft ambient bounce light on cheeks:1.5), (Hydrated and supple appearance:1.4).
+
+
+
 \### \[Negative Prompt - Quality Control]
 
 \* \*\*Keywords:\*\* "plastic skin, oversaturated colors, over-sharpened edges, cartoonish, low resolution, digital noise, smooth skin filter, watermark, text, signature, distorted facial features, unrealistic proportions, flat lighting, amateur photography, mobile phone camera quality."
