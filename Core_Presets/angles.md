@@ -87,6 +87,27 @@
 - **Description**: 두 명 이상의 인물을 한 화면에 담음. 상호작용과 전체적인 분위기 강조.
 - **Prompt**: `(two shot:1.6), (group shot:1.7), (35mm cinematic lens:1.3), (all subjects in focus:1.4), (balanced group composition:1.4)`
 
+### ### Dutch Angle (더치 앵글)
+- **Aliases**: dutch angle, tilted frame, slanted shot, 사선 앵글, 기울어진 각도
+- **Description**: 카메라를 수평에서 비스듬하게 기울여 촬영. 불안정함, 긴장감, 혹은 역동적이고 감각적인 분위기를 연출할 때 사용.
+- **Prompt**: `(dutch angle:1.5), (tilted camera:1.4), (canted angle:1.3), (dynamic composition:1.4), (cinematic tension:1.2), (off-kilter frame:1.3)`
+
+### ### Ultra Extreme Close-up Shot (울트라 익스트림 클로즈업)
+- **Aliases**: ultra extreme close-up, ECU, macro shot, detail shot, 눈/피부 초밀착 샷
+- **Description**: 특정 부위(눈동자, 입술, 피부 질감 등)를 화면 가득 채움. 미세한 표정 변화나 극도의 디테일한 텍스처를 강조.
+- **Prompt**: `(ultra extreme close-up:1.8), (macro photography:1.5), (hyper-detailed skin texture:1.6), (detailed eyes and eyelashes:1.5), (sharp focus on iris:1.4), (8k resolution:1.2), (pore detail:1.3)`
+
+### ### Bust shot (바스트 샷)
+- **Aliases**: bust shot, chest-up shot, portrait shot, 가슴 상단 샷
+- **Description**: 인물의 가슴 윗부분부터 머리 끝까지 화면에 담음. 표정과 의상, 메이크업의 디테일을 강조하며 일반적인 인터뷰나 프로필 사진에 가장 많이 사용됨.
+- **Prompt**: `(bust shot:1.6), (portrait:1.5), (upper body:1.3), (eye level:1.2), (depth of field:1.3), (soft lighting:1.2), (professional photography:1.4)`
+
+### ### === Tight shoulder-up shot (시네마틱 인물 포커스 구도) ===
+* **Prompt:** "Tight shoulder-up portrait, camera positioned at eye level, focusing intensely on the facial features. The frame starts from the mid-chest to just above the head, creating a sense of intimacy and emotional depth. Extremely shallow depth of field with creamy background bokeh."
+
+### ### === Top of the head slightly cropped (시네마틱 인물 포커스 구도) ===
+* **Prompt:** "Tight cinematic close-up with the top of the head slightly cropped by the upper edge of the frame. Focus is pinned to the eyes. This framing maximizes the intensity of the character's expression, mimicking 70mm Hollywood cinematography. Minimal headspace to create a pressurized, immersive atmosphere."
+
 ---
 
 ## 2. Lens Reference (렌즈 레퍼런스)
