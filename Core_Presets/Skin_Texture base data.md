@@ -7,17 +7,17 @@
 
 
 === Luccy 피부 (아이돌 클린) ===
-(Luccy ultra-transparent skin:1.8), (hyper-real glass skin texture:1.7), (K-pop idol dewiness:1.6), (zero-imperfection complexion:1.6), (cool-toned luminosity:1.5), (micro-reflection highlights:1.4)
+(Masterpiece beauty photography texture:1.5), (Ultra-transparent glass skin:1.6), (Subsurface scattering:1.4), (Zero-imperfection flawless finish:1.7), (Realistic micro-texture:1.2), (Dewy and luminous skin sheen:1.5). 
 
 
 
 === Luccy 생얼 피부 (일반)) ===
-(Luccy natural skin texture:1.6), (subtle epidermal pores:1.4), (realistic skin undertone:1.5), (soft matte finish with zero blemish:1.3), (detailed facial surface micro-texture:1.6), (natural ambient shadows:1.2)
+(Luccy natural skin texture:1.6), (subtle epidermal pores:1.4), (realistic skin undertone:1.5), (soft matte finish with zero blemish:1.3), (detailed facial surface micro-texture:1.6), (natural ambient shadows:1.2), 
 
 
 
 === Ariin 피부 (아이돌 클린) ===
-(Ariin-specific clear skin:1.8), (ultra-fine porcelain texture:1.7), (k-pop idol glow:1.6), (seamless complexion:1.5), (no-blemish finish:1.6), (soft focus luminosity:1.4)
+(Masterpiece beauty photography texture:1.5), (Ultra-transparent glass skin:1.6), (Subsurface scattering:1.4), (Zero-imperfection flawless finish:1.7), (Realistic micro-texture:1.2), (Dewy and luminous skin sheen:1.5). 
 
 
 
