@@ -108,6 +108,9 @@
 ### ### === Top of the head slightly cropped (시네마틱 인물 포커스 구도) ===
 * **Prompt:** "Tight cinematic close-up with the top of the head slightly cropped by the upper edge of the frame. Focus is pinned to the eyes. This framing maximizes the intensity of the character's expression, mimicking 70mm Hollywood cinematography. Minimal headspace to create a pressurized, immersive atmosphere."
 
+### ### === Macro photography of a face (쇄골 위 + 윗통수 크롭 버전) ===
+Prompt: (macro photography of a face:1.8), (extreme close-up:1.7), (tight facial crop:1.6), (clavicle-up shot:1.5), (dramatic hairline crop:1.4), (top of head tightly cropped:1.4), (minimal headspace:1.3), (focus pinned to eyes:1.5), (detailed iris:1.3), (skin texture:1.3), (85mm macro lens:1.5), (extremely shallow depth of field:1.4), (cinematic lighting:1.2), (no shoulders:1.8), (no body:1.8)
+
 ---
 
 ## 2. Lens Reference (렌즈 레퍼런스)
