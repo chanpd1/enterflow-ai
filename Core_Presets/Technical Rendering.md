@@ -82,18 +82,23 @@
 
 ---
 
-### 6. Etherna MV 전용
-*헐리우드 시네마틱 느낌과 아이돌 MV 피부 표현*
-
+### 🎥 6. Etherna MV 전용, Hollywood Hybrid Look (Anamorphic x K-pop Idol)
+*특징: 헐리우드 아나모픽 렌즈의 광학적 결함과 아이돌의 무결점 피부가 공존하는 하이엔드 룩*
 
 ```markdown
-### [Technical Rendering]
-- Camera: Arri Alexa 65 with Vintage Anamorphic Lenses
-- Effects: 1/4 Pro-Mist filter for subtle highlight bloom, high-end film scan texture with fine organic grain in shadows, lifted black levels for velvety shadow depth
-- Lighting: Low contrast cinematic lighting, sophisticated color grading (deep teal background, warm sophisticated skin tones)
-- Quality: Uncompressed cinematic RAW footage texture, soft organic focus roll-off, creamy background bokeh
-- Skin/Beauty: (Masterpiece beauty photography texture:1.5), (Zero-imperfection flawless skin finish:1.8), (Ultra-transparent satin-matte skin:1.6), (Subsurface scattering for inner glow:1.4), (Pearl-like luminosity without surface shine:1.5), (Minimally visible pores:1.2).
+### [Technical Rendering - Advanced Optical]
+- Camera: Arri Alexa 65, Panavision Anamorphic Master Prime (f/1.4)
+- Lens Physics: (Anamorphic optical distortion:1.3), (Peripheral illumination fall-off:1.2), (Blue horizontal lens flares:1.1)
+- Focus Engine: (Critical sharp focus on target eye), (Natural organic focal plane roll-off:1.4), (Non-linear depth of field blurring:1.5)
+- Optical Flaws: (Subtle chromatic aberration on edges:1.2), (Lens breathing effect), (Optical bloom on skin highlights:1.3)
 
-[Post-processing]
-- Post-processing: Soft focus bloom applied to skin, high-end beauty diffusion retouching, sophisticated luminance smoothness (뽀샤시), natural skin tone evenness.
+### [Color & Texture - Hybrid Mix]
+- Lighting: Dramatic Teal and Orange grading. Teal/Cool fill light in shadows, Amber/Orange key light only on skin highlights.
+- Skin Protection: (Preserve pure alabaster white skin tone even under cinematic lights:1.5)
+- Film Texture: (Fine film grain:1.2), (Velvety heavily lifted shadows), (Low overall exposure for cinematic mood)
+- Bokeh: (Oval anamorphic bokeh compression:1.2), (Cat's eye bokeh effect), (Swirly background blur toward edges)
+
+### [Post-processing - Character Glow]
+- Skin/Beauty: (Subsurface scattering:1.5), (Zero-imperfection flawless dewy finish), (Ultra-transparent pearlescent glass skin), (Pure white skin bloom effect:1.3).
+- Edge Treatment: (Fine hair strands melting into the background bokeh to eliminate digital cut-out lines).
 ```

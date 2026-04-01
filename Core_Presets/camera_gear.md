@@ -45,3 +45,19 @@
 - **24mm**: `(24mm wide angle:1.3)`, `(dynamic perspective distortion:1.4)` | 광각의 시원한 공간감과 역동적 왜곡.
 - **16mm**: `(16mm ultra wide-angle lens:1.4)`, `(top-down view:1.3)` | 극단적 광각, 버드 아이 뷰 및 웅장한 풍경.
 - **Anamorphic**: `(anamorphic lens:1.5)`, `(horizontal blue lens flare:1.4)`, `(oval bokeh:1.3)` | 가로 플레어와 타원형 보케가 특징인 영화적 질감.
+
+---
+
+## 3. High-End Anamorphic Physics (아나모픽 렌즈 물리 엔진)
+*나노 바나나의 디지털 선예도를 억제하고 광학적 공기감을 부여하는 고정 수치*
+
+- **Anamorphic Master Prime**: `(Anamorphic lens:1.5)`, `(Anamorphic optical distortion:1.3)`, `(Peripheral illumination fall-off:1.2)`, `(Oval bokeh compression:1.3)` | 헐리우드 블록버스터 특유의 가로 왜곡과 주변부 광량 저하.
+- **Lens Flare Physics**: `(Blue horizontal lens flare streaks:1.4)`, `(Optical highlight bloom:1.3)`, `(Subtle lens breathing:1.1)` | 아나모픽 렌즈 특유의 파란색 가로 플레어와 부드러운 빛 번짐.
+- **Focal Fall-off Logic**: `(Organic focal plane roll-off:1.4)`, `(Non-linear depth of field blurring:1.5)`, `(Soft focus boundaries:1.3)` | 칼 같은 디지털 분리가 아닌, 인물에서 배경으로 유기적으로 흐려지는 초점 그라데이션.
+- **Optical Aberrations**: `(Subtle chromatic aberration on high-contrast edges:1.2)`, `(Edge softness:1.1)`, `(Barrel distortion:1.2)` | 렌즈 가장자리의 미세한 색 번짐과 불완전한 선예도 재현.
+
+## 4. Hollywood x K-Idol Hybrid Setup (하이브리드 촬영 세팅)
+
+- **Main Camera**: `Alexa 65 with Panavision Anamorphic` | IMAX급 해상도와 눅진한 필름 질감의 결합.
+- **Focus Setting**: `Critical focus on target eye` + `Natural organic fall-off` | 인물은 장원영처럼 투명하게 살리되, 배경과의 경계는 렌즈 블러로 부드럽게 융합.
+- **Texture Mix**: `Fine film grain (Kodak Portra 400:1.2)` + `Velvety lifted shadows` | 암부를 부드럽게 올린 벨벳 질감과 유기적 입자감.

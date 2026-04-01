@@ -7,17 +7,17 @@
 
 
 === Luccy 피부 (아이돌 클린) ===
-(Masterpiece beauty photography texture:1.5), (Ultra-transparent glass skin:1.6), (Subsurface scattering:1.4), (Zero-imperfection flawless finish:1.7), (Realistic micro-texture:1.2), (Dewy and luminous skin sheen:1.5). 
+(Masterpiece beauty photography texture:1.5), (Ultra-transparent glass skin:1.6), (Subsurface scattering:1.4), (Zero-imperfection flawless finish:1.7), (Realistic micro-texture:1.2), (Dewy and luminous skin sheen:1.5).
 
 
 
 === Luccy 생얼 피부 (일반)) ===
-(Luccy natural skin texture:1.6), (subtle epidermal pores:1.4), (realistic skin undertone:1.5), (soft matte finish with zero blemish:1.3), (detailed facial surface micro-texture:1.6), (natural ambient shadows:1.2), 
+(Luccy natural skin texture:1.6), (subtle epidermal pores:1.4), (realistic skin undertone:1.5), (soft matte finish with zero blemish:1.3), (detailed facial surface micro-texture:1.6), (natural ambient shadows:1.2),
 
 
 
 === Ariin 피부 (아이돌 클린) ===
-(Masterpiece beauty photography texture:1.5), (Ultra-transparent glass skin:1.6), (Subsurface scattering:1.4), (Zero-imperfection flawless finish:1.7), (Realistic micro-texture:1.2), (Dewy and luminous skin sheen:1.5). 
+(Masterpiece beauty photography texture:1.5), (Ultra-transparent glass skin:1.6), (Subsurface scattering:1.4), (Zero-imperfection flawless finish:1.7), (Realistic micro-texture:1.2), (Dewy and luminous skin sheen:1.5).
 
 
 
@@ -124,6 +124,32 @@ Prompt: (Masterpiece beauty photography:1.4), (Ultra-transparent glass skin text
 === Natural Glossy (내추럴 광채 인플루언서 질감) ===
 
 Prompt: (Realistic healthy skin sheen:1.5), (Natural skin micro-texture:1.4), (Clear and bright skin tone:1.6), (Clean skin without blemishes:1.7), (Soft ambient bounce light on cheeks:1.5), (Hydrated and supple appearance:1.4).
+
+
+
+=== IVE 장원영/안유진 (포슬린 하이퍼-루미너스: 하이브리드 Mix용) ===
+
+(ultra-transparent porcelain skin:1.8), (radiant pearlescent luminosity:1.7), (high-definition flawless "glass skin":1.6), (alabaster white complexion:1.5), (subtle rosy-pink undertones:1.4), (Subsurface scattering:1.5), (liquid silk texture:1.5).
+
+
+
+\* \*\*Prompt Keywords:\*\* (IVE-style pure aesthetics:1.5), (ethereal radiant glow:1.6), (crystalline transparency:1.4), (majestic sky-blue mood:1.5), (high-fashion digital retouching:1.3).
+
+\* \*\*Cinematic Mix Logic (핵심):\*\* \* (Preserve pure white skin tone even under cinematic amber lighting:1.5) - 헐리우드 조명 아래에서도 피부색 유지.
+
+&#x20;   \* (Optical bloom applied only to skin highlights for a 'radiant glow' / 뽀샤시 effect:1.4) - 피부에만 선택적 뽀샤시 적용.
+
+&#x20;   \* (Zero-imperfection dewy finish:1.7) - 모공 없는 매끄러운 수분광.
+
+
+
+=== 헐리우드 시네마틱 전용 (K-Idol Skin Defense) ===
+
+(Clean alabaster white skin base:1.6), (Anti-yellowing under amber cinematic lights:1.5), (Luminous inner-glow without surface grease:1.4), (Minimally visible pores:1.2), (Soft-focus skin boundaries melting into bokeh:1.3).
+
+
+
+\* \*\*Prompt Keywords:\*\* (Hollywood lighting with K-pop skin texture), (Velvety skin highlights), (Sophisticated beauty diffusion), (Natural skin tone evenness under teal-and-orange grading).
 
 
 

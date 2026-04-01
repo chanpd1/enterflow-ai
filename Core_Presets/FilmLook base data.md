@@ -32,6 +32,22 @@
 
 
 
+\### === Hollywood Anamorphic (헐리우드 아나모픽 - 광학적 불완전성) ===
+
+
+
+\* \*\*Prompt:\*\* "High-end Hollywood anamorphic cinematic look. (Anamorphic optical distortion:1.3) with (Peripheral illumination fall-off:1.2) and (Blue horizontal lens flares). (Critical focus on target) with (Natural organic focal plane roll-off:1.4) and (Non-linear depth of field blurring:1.5). (Subtle chromatic aberration:1.2) on high-contrast edges. (Oval-shaped anamorphic bokeh) that dissolves smoothly into the background. (Fine hair strands melting into the bokeh) to eliminate artificial digital cut-outs."
+
+
+
+\### === Velvety Film Lift (벨벳 필름 리프트 - 부드러운 암부) ===
+
+
+
+\* \*\*Prompt:\*\* "(Low overall exposure) with (Velvety heavily lifted shadows:1.4) for a faded film-lift aesthetic. Sophisticated (Teal and Orange grading) with warm amber highlights only on skin vs. deep teal in shadows. (Kodak Portra 400 film emulation) with (Fine organic film grain:1.2) across the entire frame. (Optical bloom on skin highlights:1.3) creating a radiant '뽀샤시' glow while maintaining background grit."
+
+
+
 \### \[Negative Prompt - Quality Control]
 
 \* \*\*Keywords:\*\* "plastic skin, oversaturated colors, over-sharpened edges, cartoonish, low resolution, digital noise, smooth skin filter, watermark, text, signature, distorted facial features, unrealistic proportions, flat lighting, amateur photography, mobile phone camera quality."
